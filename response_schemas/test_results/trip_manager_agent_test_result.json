@@ -1,0 +1,36 @@
+{
+  "agent_name": "Trip Manager Agent",
+  "agent_id": "6985ae9af513a931daeaad84",
+  "test_message": "Create a new trip to Goa from Dec 15-20, 2024. Participants are Alice, Bob, Charlie, and Diana.",
+  "expected_purpose": "assistant",
+  "timestamp": "2026-02-06T09:07:48.729026",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "success",
+    "result": {
+      "trip_name": "Goa Adventure",
+      "destination": "Goa",
+      "start_date": "2024-12-15",
+      "end_date": "2024-12-20",
+      "participants": [
+        "Alice",
+        "Bob",
+        "Charlie",
+        "Diana"
+      ],
+      "trip_status": "active",
+      "actions_available": [
+        "add participant",
+        "remove participant",
+        "update details"
+      ],
+      "message": "Trip to Goa created successfully with specified participants."
+    },
+    "metadata": {
+      "agent_name": "Trip Manager Agent",
+      "timestamp": "2023-10-06T12:34:56Z"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"success\",\n  \"result\": {\n    \"trip_name\": \"Goa Adventure\",\n    \"destination\": \"Goa\",\n    \"start_date\": \"2024-12-15\",\n    \"end_date\": \"2024-12-20\",\n    \"participants\": [\"Alice\", \"Bob\", \"Charlie\", \"Diana\"],\n    \"trip_status\": \"active\",\n    \"actions_available\": [\"add participant\", \"remove participant\", \"update details\"],\n    \"message\": \"Trip to Goa created successfully with specified participants.\"\n  },\n  \"metadata\": {\n    \"agent_name\": \"Trip Manager Agent\",\n    \"timestamp\": \"2023-10-06T12:34:56Z\"\n  }\n}"
+}

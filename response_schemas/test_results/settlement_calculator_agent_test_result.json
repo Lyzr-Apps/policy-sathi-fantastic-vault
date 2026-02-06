@@ -1,0 +1,69 @@
+{
+  "agent_name": "Settlement Calculator Agent",
+  "agent_id": "6985aec5f513a931daeaad89",
+  "test_message": "Calculate settlements for our trip. Alice paid \u20b92400, Bob paid \u20b93200, Charlie paid \u20b91500, Diana paid \u20b90. Total expenses \u20b97100. Equal split among 4 people.",
+  "expected_purpose": "assistant",
+  "timestamp": "2026-02-06T09:08:11.917506",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "success",
+    "result": {
+      "individual_balances": [
+        {
+          "person": "Alice",
+          "paid": 2400,
+          "owes": 1775,
+          "balance": 625
+        },
+        {
+          "person": "Bob",
+          "paid": 3200,
+          "owes": 1775,
+          "balance": 1425
+        },
+        {
+          "person": "Charlie",
+          "paid": 1500,
+          "owes": 1775,
+          "balance": -275
+        },
+        {
+          "person": "Diana",
+          "paid": 0,
+          "owes": 1775,
+          "balance": -1775
+        }
+      ],
+      "settlement_plan": [
+        {
+          "from": "Charlie",
+          "to": "Alice",
+          "amount": 275
+        },
+        {
+          "from": "Diana",
+          "to": "Bob",
+          "amount": 1425
+        },
+        {
+          "from": "Diana",
+          "to": "Alice",
+          "amount": 350
+        }
+      ],
+      "summary": {
+        "people_owe": 2,
+        "people_owed": 2,
+        "transactions_needed": 3,
+        "total_expenses": 7100
+      },
+      "message": "Settlement plan calculated successfully."
+    },
+    "metadata": {
+      "agent_name": "Settlement Calculator Agent",
+      "timestamp": "2023-10-04T14:45:00Z"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"success\",\n  \"result\": {\n    \"individual_balances\": [\n      {\n        \"person\": \"Alice\",\n        \"paid\": 2400,\n        \"owes\": 1775,\n        \"balance\": 625\n      },\n      {\n        \"person\": \"Bob\",\n        \"paid\": 3200,\n        \"owes\": 1775,\n        \"balance\": 1425\n      },\n      {\n        \"person\": \"Charlie\",\n        \"paid\": 1500,\n        \"owes\": 1775,\n        \"balance\": -275\n      },\n      {\n        \"person\": \"Diana\",\n        \"paid\": 0,\n        \"owes\": 1775,\n        \"balance\": -1775\n      }\n    ],\n    \"settlement_plan\": [\n      {\n        \"from\": \"Charlie\",\n        \"to\": \"Alice\",\n        \"amount\": 275\n      },\n      {\n        \"from\": \"Diana\",\n        \"to\": \"Bob\",\n        \"amount\": 1425\n      },\n      {\n        \"from\": \"Diana\",\n        \"to\": \"Alice\",\n        \"amount\": 350\n      }\n    ],\n    \"summary\": {\n      \"people_owe\": 2,\n      \"people_owed\": 2,\n      \"transactions_needed\": 3,\n      \"total_expenses\": 7100\n    },\n    \"message\": \"Settlement plan calculated successfully.\"\n  },\n  \"metadata\": {\n    \"agent_name\": \"Settlement Calculator Agent\",\n    \"timestamp\": \"2023-10-04T14:45:00Z\"\n  }\n}"
+}

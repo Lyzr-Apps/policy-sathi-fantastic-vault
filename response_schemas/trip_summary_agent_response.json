@@ -1,0 +1,263 @@
+{
+  "agent_name": "Trip Summary Agent",
+  "agent_id": "6985aedd4e2223b52121c427",
+  "agent_purpose": "Generates comprehensive trip reports with statistics and insights",
+  "description": "Schema for Trip Summary Agent responses including overall statistics, category breakdowns, per-person analysis, and settlement instructions",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "overall_statistics": {
+        "total_spent": "number",
+        "number_of_expenses": "number",
+        "trip_duration_days": "number",
+        "average_per_person": "number"
+      },
+      "category_breakdown": [
+        {
+          "category": "string",
+          "amount": "number",
+          "percentage": "number"
+        }
+      ],
+      "per_person_analysis": [
+        {
+          "person": "string",
+          "paid": "number",
+          "share": "number",
+          "net": "number"
+        }
+      ],
+      "top_expenses": [
+        {
+          "description": "string",
+          "amount": "number",
+          "paid_by": "string"
+        }
+      ],
+      "settlement_instructions": [
+        {
+          "from": "string",
+          "to": "string",
+          "amount": "number"
+        }
+      ],
+      "insights": {
+        "biggest_spender": "string",
+        "most_expensive_category": "string",
+        "message": "string"
+      }
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "overall_statistics": {
+        "total_spent": 15500,
+        "number_of_expenses": 4,
+        "trip_duration_days": 5,
+        "average_per_person": 3875
+      },
+      "category_breakdown": [
+        {
+          "category": "Food",
+          "amount": 6000,
+          "percentage": 38.71
+        },
+        {
+          "category": "Transport",
+          "amount": 4500,
+          "percentage": 29.03
+        },
+        {
+          "category": "Accommodation",
+          "amount": 3000,
+          "percentage": 19.35
+        },
+        {
+          "category": "Activities",
+          "amount": 2000,
+          "percentage": 12.9
+        }
+      ],
+      "per_person_analysis": [
+        {
+          "person": "Alice",
+          "paid": 5000,
+          "share": 3875,
+          "net": 1125
+        },
+        {
+          "person": "Bob",
+          "paid": 6500,
+          "share": 3875,
+          "net": 2625
+        },
+        {
+          "person": "Charlie",
+          "paid": 2000,
+          "share": 3875,
+          "net": -1875
+        },
+        {
+          "person": "Diana",
+          "paid": 2000,
+          "share": 3875,
+          "net": -1875
+        }
+      ],
+      "top_expenses": [
+        {
+          "description": "Food",
+          "amount": 6000,
+          "paid_by": "Not specified"
+        },
+        {
+          "description": "Transport",
+          "amount": 4500,
+          "paid_by": "Not specified"
+        },
+        {
+          "description": "Accommodation",
+          "amount": 3000,
+          "paid_by": "Not specified"
+        },
+        {
+          "description": "Activities",
+          "amount": 2000,
+          "paid_by": "Not specified"
+        }
+      ],
+      "settlement_instructions": [
+        {
+          "from": "Charlie",
+          "to": "Alice",
+          "amount": 1875
+        },
+        {
+          "from": "Diana",
+          "to": "Alice",
+          "amount": 1875
+        }
+      ],
+      "insights": {
+        "biggest_spender": "Bob",
+        "most_expensive_category": "Food",
+        "message": "Bob spent the most on the trip. Food was the highest expense category."
+      }
+    },
+    "metadata": {
+      "agent_name": "Trip Summary Agent",
+      "timestamp": "2023-10-14T12:00:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-02-06T09:08:23.243654",
+  "test_message_used": "Hello, provide a sample response",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "overall_statistics": {
+        "total_spent": 15500,
+        "number_of_expenses": 4,
+        "trip_duration_days": 5,
+        "average_per_person": 3875
+      },
+      "category_breakdown": [
+        {
+          "category": "Food",
+          "amount": 6000,
+          "percentage": 38.71
+        },
+        {
+          "category": "Transport",
+          "amount": 4500,
+          "percentage": 29.03
+        },
+        {
+          "category": "Accommodation",
+          "amount": 3000,
+          "percentage": 19.35
+        },
+        {
+          "category": "Activities",
+          "amount": 2000,
+          "percentage": 12.9
+        }
+      ],
+      "per_person_analysis": [
+        {
+          "person": "Alice",
+          "paid": 5000,
+          "share": 3875,
+          "net": 1125
+        },
+        {
+          "person": "Bob",
+          "paid": 6500,
+          "share": 3875,
+          "net": 2625
+        },
+        {
+          "person": "Charlie",
+          "paid": 2000,
+          "share": 3875,
+          "net": -1875
+        },
+        {
+          "person": "Diana",
+          "paid": 2000,
+          "share": 3875,
+          "net": -1875
+        }
+      ],
+      "top_expenses": [
+        {
+          "description": "Food",
+          "amount": 6000,
+          "paid_by": "Not specified"
+        },
+        {
+          "description": "Transport",
+          "amount": 4500,
+          "paid_by": "Not specified"
+        },
+        {
+          "description": "Accommodation",
+          "amount": 3000,
+          "paid_by": "Not specified"
+        },
+        {
+          "description": "Activities",
+          "amount": 2000,
+          "paid_by": "Not specified"
+        }
+      ],
+      "settlement_instructions": [
+        {
+          "from": "Charlie",
+          "to": "Alice",
+          "amount": 1875
+        },
+        {
+          "from": "Diana",
+          "to": "Alice",
+          "amount": 1875
+        }
+      ],
+      "insights": {
+        "biggest_spender": "Bob",
+        "most_expensive_category": "Food",
+        "message": "Bob spent the most on the trip. Food was the highest expense category."
+      }
+    },
+    "metadata": {
+      "agent_name": "Trip Summary Agent",
+      "timestamp": "2023-10-14T12:00:00Z"
+    }
+  },
+  "test_passed": true
+}

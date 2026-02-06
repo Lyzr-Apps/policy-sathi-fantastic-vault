@@ -1,6 +1,6 @@
 {
   "workflow_name": "AI Travel Companion",
-  "architecture": "Multi-Agent System (3 Specialist Agents)",
+  "architecture": "Multi-Agent System (7 Specialist Agents)",
   "created_at": "2026-02-06T00:00:00Z",
   "agents": [
     {
@@ -41,6 +41,58 @@
       "top_p": 1,
       "has_knowledge_base": false,
       "response_schema": "response_schemas/itinerary_expense_tracker_agent_response.json"
+    },
+    {
+      "node_id": "trip_manager_agent",
+      "agent_id": "6985ae9af513a931daeaad84",
+      "name": "Trip Manager Agent",
+      "type": "Specialist",
+      "description": "Creates and manages group trips. Handles participant addition/removal, trip details (name, destination, dates). Tracks active participants.",
+      "provider": "OpenAI",
+      "model": "gpt-4o",
+      "temperature": 0.3,
+      "top_p": 1,
+      "has_knowledge_base": false,
+      "response_schema": "response_schemas/trip_manager_agent_response.json"
+    },
+    {
+      "node_id": "expense_tracker_agent",
+      "agent_id": "6985aeae4e2223b52121c423",
+      "name": "Expense Tracker Agent",
+      "type": "Specialist",
+      "description": "Records individual expenses with payer, amount, category, and split type. Tracks who paid what and who shares each expense. Validates expense entries.",
+      "provider": "OpenAI",
+      "model": "gpt-4o",
+      "temperature": 0.2,
+      "top_p": 1,
+      "has_knowledge_base": false,
+      "response_schema": "response_schemas/expense_tracker_agent_response.json"
+    },
+    {
+      "node_id": "settlement_agent",
+      "agent_id": "6985aec5f513a931daeaad89",
+      "name": "Settlement Calculator Agent",
+      "type": "Specialist",
+      "description": "Computes real-time balances, per-person shares, and optimal settlements. Calculates who owes whom and by how much. Minimizes number of transactions needed.",
+      "provider": "OpenAI",
+      "model": "gpt-4o",
+      "temperature": 0.1,
+      "top_p": 1,
+      "has_knowledge_base": false,
+      "response_schema": "response_schemas/settlement_calculator_agent_response.json"
+    },
+    {
+      "node_id": "summary_agent",
+      "agent_id": "6985aedd4e2223b52121c427",
+      "name": "Trip Summary Agent",
+      "type": "Specialist",
+      "description": "Generates comprehensive trip reports with total expenses, category-wise breakdown, per-person spending, and settlement suggestions. Creates shareable summaries.",
+      "provider": "OpenAI",
+      "model": "gpt-4o",
+      "temperature": 0.3,
+      "top_p": 1,
+      "has_knowledge_base": false,
+      "response_schema": "response_schemas/trip_summary_agent_response.json"
     }
   ],
   "knowledge_bases": []

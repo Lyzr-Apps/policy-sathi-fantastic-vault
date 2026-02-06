@@ -1,0 +1,83 @@
+{
+  "agent_name": "Trip Manager Agent",
+  "agent_id": "6985ae9af513a931daeaad84",
+  "agent_purpose": "Creates and manages group trips with participant tracking",
+  "description": "Schema for Trip Manager Agent responses including trip details, participant lists, and available actions",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "trip_name": "string",
+      "destination": "string",
+      "start_date": "string",
+      "end_date": "string",
+      "participants": [
+        "string"
+      ],
+      "trip_status": "string",
+      "actions_available": [
+        "string"
+      ],
+      "message": "string"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "trip_name": "Goa Adventure",
+      "destination": "Goa",
+      "start_date": "2024-12-15",
+      "end_date": "2024-12-20",
+      "participants": [
+        "Alice",
+        "Bob",
+        "Charlie",
+        "Diana"
+      ],
+      "trip_status": "active",
+      "actions_available": [
+        "add participant",
+        "remove participant",
+        "update details"
+      ],
+      "message": "Trip to Goa created successfully with specified participants."
+    },
+    "metadata": {
+      "agent_name": "Trip Manager Agent",
+      "timestamp": "2023-10-06T12:34:56Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-02-06T09:07:48.729450",
+  "test_message_used": "Hello, provide a sample response",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "trip_name": "Goa Adventure",
+      "destination": "Goa",
+      "start_date": "2024-12-15",
+      "end_date": "2024-12-20",
+      "participants": [
+        "Alice",
+        "Bob",
+        "Charlie",
+        "Diana"
+      ],
+      "trip_status": "active",
+      "actions_available": [
+        "add participant",
+        "remove participant",
+        "update details"
+      ],
+      "message": "Trip to Goa created successfully with specified participants."
+    },
+    "metadata": {
+      "agent_name": "Trip Manager Agent",
+      "timestamp": "2023-10-06T12:34:56Z"
+    }
+  },
+  "test_passed": true
+}

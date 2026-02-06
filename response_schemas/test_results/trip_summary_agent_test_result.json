@@ -1,0 +1,112 @@
+{
+  "agent_name": "Trip Summary Agent",
+  "agent_id": "6985aedd4e2223b52121c427",
+  "test_message": "Generate summary for Goa trip Dec 15-20. Total spent \u20b915,500. Food: \u20b96000, Transport: \u20b94500, Accommodation: \u20b93000, Activities: \u20b92000. Alice paid \u20b95000, Bob paid \u20b96500, Charlie paid \u20b92000, Diana paid \u20b92000.",
+  "expected_purpose": "assistant",
+  "timestamp": "2026-02-06T09:08:23.242804",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "success",
+    "result": {
+      "overall_statistics": {
+        "total_spent": 15500,
+        "number_of_expenses": 4,
+        "trip_duration_days": 5,
+        "average_per_person": 3875
+      },
+      "category_breakdown": [
+        {
+          "category": "Food",
+          "amount": 6000,
+          "percentage": 38.71
+        },
+        {
+          "category": "Transport",
+          "amount": 4500,
+          "percentage": 29.03
+        },
+        {
+          "category": "Accommodation",
+          "amount": 3000,
+          "percentage": 19.35
+        },
+        {
+          "category": "Activities",
+          "amount": 2000,
+          "percentage": 12.9
+        }
+      ],
+      "per_person_analysis": [
+        {
+          "person": "Alice",
+          "paid": 5000,
+          "share": 3875,
+          "net": 1125
+        },
+        {
+          "person": "Bob",
+          "paid": 6500,
+          "share": 3875,
+          "net": 2625
+        },
+        {
+          "person": "Charlie",
+          "paid": 2000,
+          "share": 3875,
+          "net": -1875
+        },
+        {
+          "person": "Diana",
+          "paid": 2000,
+          "share": 3875,
+          "net": -1875
+        }
+      ],
+      "top_expenses": [
+        {
+          "description": "Food",
+          "amount": 6000,
+          "paid_by": "Not specified"
+        },
+        {
+          "description": "Transport",
+          "amount": 4500,
+          "paid_by": "Not specified"
+        },
+        {
+          "description": "Accommodation",
+          "amount": 3000,
+          "paid_by": "Not specified"
+        },
+        {
+          "description": "Activities",
+          "amount": 2000,
+          "paid_by": "Not specified"
+        }
+      ],
+      "settlement_instructions": [
+        {
+          "from": "Charlie",
+          "to": "Alice",
+          "amount": 1875
+        },
+        {
+          "from": "Diana",
+          "to": "Alice",
+          "amount": 1875
+        }
+      ],
+      "insights": {
+        "biggest_spender": "Bob",
+        "most_expensive_category": "Food",
+        "message": "Bob spent the most on the trip. Food was the highest expense category."
+      }
+    },
+    "metadata": {
+      "agent_name": "Trip Summary Agent",
+      "timestamp": "2023-10-14T12:00:00Z"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"success\",\n  \"result\": {\n    \"overall_statistics\": {\n      \"total_spent\": 15500,\n      \"number_of_expenses\": 4,\n      \"trip_duration_days\": 5,\n      \"average_per_person\": 3875\n    },\n    \"category_breakdown\": [\n      {\n        \"category\": \"Food\",\n        \"amount\": 6000,\n        \"percentage\": 38.71\n      },\n      {\n        \"category\": \"Transport\",\n        \"amount\": 4500,\n        \"percentage\": 29.03\n      },\n      {\n        \"category\": \"Accommodation\",\n        \"amount\": 3000,\n        \"percentage\": 19.35\n      },\n      {\n        \"category\": \"Activities\",\n        \"amount\": 2000,\n        \"percentage\": 12.90\n      }\n    ],\n    \"per_person_analysis\": [\n      {\n        \"person\": \"Alice\",\n        \"paid\": 5000,\n        \"share\": 3875,\n        \"net\": 1125\n      },\n      {\n        \"person\": \"Bob\",\n        \"paid\": 6500,\n        \"share\": 3875,\n        \"net\": 2625\n      },\n      {\n        \"person\": \"Charlie\",\n        \"paid\": 2000,\n        \"share\": 3875,\n        \"net\": -1875\n      },\n      {\n        \"person\": \"Diana\",\n        \"paid\": 2000,\n        \"share\": 3875,\n        \"net\": -1875\n      }\n    ],\n    \"top_expenses\": [\n      {\n        \"description\": \"Food\",\n        \"amount\": 6000,\n        \"paid_by\": \"Not specified\"\n      },\n      {\n        \"description\": \"Transport\",\n        \"amount\": 4500,\n        \"paid_by\": \"Not specified\"\n      },\n      {\n        \"description\": \"Accommodation\",\n        \"amount\": 3000,\n        \"paid_by\": \"Not specified\"\n      },\n      {\n        \"description\": \"Activities\",\n        \"amount\": 2000,\n        \"paid_by\": \"Not specified\"\n      }\n    ],\n    \"settlement_instructions\": [\n      {\n        \"from\": \"Charlie\",\n        \"to\": \"Alice\",\n        \"amount\": 1875\n      },\n      {\n        \"from\": \"Diana\",\n        \"to\": \"Alice\",\n        \"amount\": 1875\n      }\n    ],\n    \"insights\": {\n      \"biggest_spender\": \"Bob\",\n      \"most_expensive_category\": \"Food\",\n      \"message\": \"Bob spent the most on the trip. Food was the highest expense category.\"\n    }\n  },\n  \"metadata\": {\n    \"agent_name\": \"Trip Summary Agent\",\n    \"timestamp\": \"2023-10-14T12:00:00Z\"\n  }\n}"
+}

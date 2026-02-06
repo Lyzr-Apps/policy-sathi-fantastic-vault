@@ -1,0 +1,79 @@
+{
+  "agent_name": "Expense Tracker Agent",
+  "agent_id": "6985aeae4e2223b52121c423",
+  "agent_purpose": "Records and tracks group expenses with validation and categorization",
+  "description": "Schema for Expense Tracker Agent responses including expense details, split information, and running totals",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "paid_by": "string",
+      "amount": "number",
+      "currency": "string",
+      "category": "string",
+      "description": "string",
+      "date": "string",
+      "split_among": [
+        "string"
+      ],
+      "per_person_share": "number",
+      "running_total": "number",
+      "message": "string"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "paid_by": "Alice",
+      "amount": 2400,
+      "currency": "\u20b9",
+      "category": "food",
+      "description": "dinner at a restaurant",
+      "date": "Dec 15",
+      "split_among": [
+        "Alice",
+        "Person 2",
+        "Person 3",
+        "Person 4"
+      ],
+      "per_person_share": 600,
+      "running_total": 2400,
+      "message": "Expense recorded successfully."
+    },
+    "metadata": {
+      "agent_name": "Expense Tracker Agent",
+      "timestamp": "2023-03-14T12:00:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-02-06T09:08:01.998280",
+  "test_message_used": "Hello, provide a sample response",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "paid_by": "Alice",
+      "amount": 2400,
+      "currency": "\u20b9",
+      "category": "food",
+      "description": "dinner at a restaurant",
+      "date": "Dec 15",
+      "split_among": [
+        "Alice",
+        "Person 2",
+        "Person 3",
+        "Person 4"
+      ],
+      "per_person_share": 600,
+      "running_total": 2400,
+      "message": "Expense recorded successfully."
+    },
+    "metadata": {
+      "agent_name": "Expense Tracker Agent",
+      "timestamp": "2023-03-14T12:00:00Z"
+    }
+  },
+  "test_passed": true
+}

@@ -1,0 +1,34 @@
+{
+  "agent_name": "Expense Tracker Agent",
+  "agent_id": "6985aeae4e2223b52121c423",
+  "test_message": "Alice paid \u20b92400 for dinner at a restaurant on Dec 15. Split equally among all 4 people. Category: Food.",
+  "expected_purpose": "assistant",
+  "timestamp": "2026-02-06T09:08:01.997728",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "success",
+    "result": {
+      "paid_by": "Alice",
+      "amount": 2400,
+      "currency": "\u20b9",
+      "category": "food",
+      "description": "dinner at a restaurant",
+      "date": "Dec 15",
+      "split_among": [
+        "Alice",
+        "Person 2",
+        "Person 3",
+        "Person 4"
+      ],
+      "per_person_share": 600,
+      "running_total": 2400,
+      "message": "Expense recorded successfully."
+    },
+    "metadata": {
+      "agent_name": "Expense Tracker Agent",
+      "timestamp": "2023-03-14T12:00:00Z"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"success\",\n  \"result\": {\n    \"paid_by\": \"Alice\",\n    \"amount\": 2400,\n    \"currency\": \"\u20b9\",\n    \"category\": \"food\",\n    \"description\": \"dinner at a restaurant\",\n    \"date\": \"Dec 15\",\n    \"split_among\": [\"Alice\", \"Person 2\", \"Person 3\", \"Person 4\"],\n    \"per_person_share\": 600,\n    \"running_total\": 2400,\n    \"message\": \"Expense recorded successfully.\"\n  },\n  \"metadata\": {\n    \"agent_name\": \"Expense Tracker Agent\",\n    \"timestamp\": \"2023-03-14T12:00:00Z\"\n  }\n}"
+}

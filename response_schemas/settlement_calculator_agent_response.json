@@ -1,0 +1,159 @@
+{
+  "agent_name": "Settlement Calculator Agent",
+  "agent_id": "6985aec5f513a931daeaad89",
+  "agent_purpose": "Calculates balances and generates optimal settlement plans",
+  "description": "Schema for Settlement Calculator Agent responses including individual balances, settlement plan, and summary statistics",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "individual_balances": [
+        {
+          "person": "string",
+          "paid": "number",
+          "owes": "number",
+          "balance": "number"
+        }
+      ],
+      "settlement_plan": [
+        {
+          "from": "string",
+          "to": "string",
+          "amount": "number"
+        }
+      ],
+      "summary": {
+        "people_owe": "number",
+        "people_owed": "number",
+        "transactions_needed": "number",
+        "total_expenses": "number"
+      },
+      "message": "string"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "individual_balances": [
+        {
+          "person": "Alice",
+          "paid": 2400,
+          "owes": 1775,
+          "balance": 625
+        },
+        {
+          "person": "Bob",
+          "paid": 3200,
+          "owes": 1775,
+          "balance": 1425
+        },
+        {
+          "person": "Charlie",
+          "paid": 1500,
+          "owes": 1775,
+          "balance": -275
+        },
+        {
+          "person": "Diana",
+          "paid": 0,
+          "owes": 1775,
+          "balance": -1775
+        }
+      ],
+      "settlement_plan": [
+        {
+          "from": "Charlie",
+          "to": "Alice",
+          "amount": 275
+        },
+        {
+          "from": "Diana",
+          "to": "Bob",
+          "amount": 1425
+        },
+        {
+          "from": "Diana",
+          "to": "Alice",
+          "amount": 350
+        }
+      ],
+      "summary": {
+        "people_owe": 2,
+        "people_owed": 2,
+        "transactions_needed": 3,
+        "total_expenses": 7100
+      },
+      "message": "Settlement plan calculated successfully."
+    },
+    "metadata": {
+      "agent_name": "Settlement Calculator Agent",
+      "timestamp": "2023-10-04T14:45:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-02-06T09:08:11.918114",
+  "test_message_used": "Hello, provide a sample response",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "individual_balances": [
+        {
+          "person": "Alice",
+          "paid": 2400,
+          "owes": 1775,
+          "balance": 625
+        },
+        {
+          "person": "Bob",
+          "paid": 3200,
+          "owes": 1775,
+          "balance": 1425
+        },
+        {
+          "person": "Charlie",
+          "paid": 1500,
+          "owes": 1775,
+          "balance": -275
+        },
+        {
+          "person": "Diana",
+          "paid": 0,
+          "owes": 1775,
+          "balance": -1775
+        }
+      ],
+      "settlement_plan": [
+        {
+          "from": "Charlie",
+          "to": "Alice",
+          "amount": 275
+        },
+        {
+          "from": "Diana",
+          "to": "Bob",
+          "amount": 1425
+        },
+        {
+          "from": "Diana",
+          "to": "Alice",
+          "amount": 350
+        }
+      ],
+      "summary": {
+        "people_owe": 2,
+        "people_owed": 2,
+        "transactions_needed": 3,
+        "total_expenses": 7100
+      },
+      "message": "Settlement plan calculated successfully."
+    },
+    "metadata": {
+      "agent_name": "Settlement Calculator Agent",
+      "timestamp": "2023-10-04T14:45:00Z"
+    }
+  },
+  "test_passed": true
+}
