@@ -157,19 +157,34 @@ export async function POST(request: NextRequest) {
 
     const rawText = await response.text()
 
+    // Check if response is HTML (common error page)
+    if (rawText.trim().startsWith('<')) {
+      return NextResponse.json({
+        success: false,
+        response: {
+          status: 'error',
+          result: {},
+          message: 'API returned HTML instead of JSON. Please check your API key and network connection.',
+        },
+        error: 'Invalid API response format',
+        raw_response: rawText.substring(0, 500), // Truncate HTML
+      })
+    }
+
     if (response.ok) {
       const parsed = parseLLMJson(rawText)
 
-      if (parsed?.success === false && parsed?.error) {
+      // Handle parse failures
+      if (!parsed || parsed?.success === false) {
         return NextResponse.json({
           success: false,
           response: {
             status: 'error',
             result: {},
-            message: parsed.error,
+            message: parsed?.error || 'Failed to parse agent response',
           },
-          error: parsed.error,
-          raw_response: rawText,
+          error: parsed?.error || 'JSON parse error',
+          raw_response: rawText.substring(0, 1000),
         })
       }
 
