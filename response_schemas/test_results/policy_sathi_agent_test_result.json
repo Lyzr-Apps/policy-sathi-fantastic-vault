@@ -1,0 +1,22 @@
+{
+  "agent_name": "Policy Sathi Agent",
+  "agent_id": "6985a3695eb49186d63e5dd6",
+  "test_message": "Explain the maternity leave policy for government employees",
+  "expected_purpose": "assistant",
+  "timestamp": "2026-02-06T08:17:33.674914",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "success",
+    "result": {
+      "formatted_response": "I don't have information about this in the uploaded policy documents",
+      "policy_name": "Maternity Leave Policy for Government Employees",
+      "sections_included": []
+    },
+    "metadata": {
+      "agent_name": "Policy Sathi Agent",
+      "timestamp": "2023-11-02T18:25:43Z"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"success\",\n  \"result\": {\n    \"formatted_response\": \"I don't have information about this in the uploaded policy documents\",\n    \"policy_name\": \"Maternity Leave Policy for Government Employees\",\n    \"sections_included\": []\n  },\n  \"metadata\": {\n    \"agent_name\": \"Policy Sathi Agent\",\n    \"timestamp\": \"2023-11-02T18:25:43Z\"\n  }\n}"
+}

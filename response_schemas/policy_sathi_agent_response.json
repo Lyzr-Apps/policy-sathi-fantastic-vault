@@ -1,0 +1,48 @@
+{
+  "agent_name": "Policy Sathi Agent",
+  "agent_id": "6985a3695eb49186d63e5dd6",
+  "agent_purpose": "policy_assistant",
+  "description": "Transforms policy information into structured, human-friendly responses with predefined emoji sections including Policy at a Glance, Key Takeaways, Benefits, Eligibility, Documents Required, Deadlines, How to Apply, and Common Questions",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "formatted_response": "string",
+      "policy_name": "string",
+      "sections_included": [
+        "any"
+      ]
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "formatted_response": "I don't have information about this in the uploaded policy documents",
+      "policy_name": "Maternity Leave Policy for Government Employees",
+      "sections_included": []
+    },
+    "metadata": {
+      "agent_name": "Policy Sathi Agent",
+      "timestamp": "2023-11-02T18:25:43Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-02-06T08:17:33.675429",
+  "test_message_used": "Hello, provide a sample response",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "formatted_response": "I don't have information about this in the uploaded policy documents",
+      "policy_name": "Maternity Leave Policy for Government Employees",
+      "sections_included": []
+    },
+    "metadata": {
+      "agent_name": "Policy Sathi Agent",
+      "timestamp": "2023-11-02T18:25:43Z"
+    }
+  },
+  "test_passed": true
+}

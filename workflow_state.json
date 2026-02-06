@@ -1,0 +1,31 @@
+{
+  "workflow_name": "Policy Sathi - Smart Policy Assistant",
+  "architecture": "Single Agent with Knowledge Base",
+  "created_at": "2026-02-06T00:00:00Z",
+  "agents": [
+    {
+      "node_id": "policy_agent",
+      "agent_id": "6985a3695eb49186d63e5dd6",
+      "name": "Policy Sathi Agent",
+      "type": "Single",
+      "description": "Searches policy documents in knowledge base and transforms complex policy information into structured, human-friendly responses following the predefined output format. Maintains conversation context for follow-up questions.",
+      "provider": "OpenAI",
+      "model": "gpt-4o",
+      "temperature": 0.3,
+      "top_p": 1,
+      "has_knowledge_base": true,
+      "rag_id": "6985a356de7de278e55d2891",
+      "rag_name": "policydocumentsc7bl",
+      "knowledge_base_name": "Policy Documents",
+      "response_schema": "response_schemas/policy_sathi_agent_response.json"
+    }
+  ],
+  "knowledge_bases": [
+    {
+      "rag_id": "6985a356de7de278e55d2891",
+      "rag_name": "policydocumentsc7bl",
+      "name": "Policy Documents",
+      "description": "Contains government policies, employee handbooks, welfare schemes, and scholarship information that will be searched to answer user queries"
+    }
+  ]
+}
