@@ -1,31 +1,47 @@
 {
-  "workflow_name": "Policy Sathi - Smart Policy Assistant",
-  "architecture": "Single Agent with Knowledge Base",
+  "workflow_name": "AI Travel Companion",
+  "architecture": "Multi-Agent System (3 Specialist Agents)",
   "created_at": "2026-02-06T00:00:00Z",
   "agents": [
     {
-      "node_id": "policy_agent",
-      "agent_id": "6985a3695eb49186d63e5dd6",
-      "name": "Policy Sathi Agent",
-      "type": "Single",
-      "description": "Searches policy documents in knowledge base and transforms complex policy information into structured, human-friendly responses following the predefined output format. Maintains conversation context for follow-up questions.",
+      "node_id": "route_agent",
+      "agent_id": "6985aa8af513a931daeaad1c",
+      "name": "Route & Transport Planner Agent",
+      "type": "Specialist",
+      "description": "Suggests fastest, cheapest, or most convenient routes. Adjusts routes dynamically based on traffic or disruptions. Provides travel time estimates and alternative routes.",
       "provider": "OpenAI",
       "model": "gpt-4o",
-      "temperature": 0.3,
+      "temperature": 0.7,
       "top_p": 1,
-      "has_knowledge_base": true,
-      "rag_id": "6985a356de7de278e55d2891",
-      "rag_name": "policydocumentsc7bl",
-      "knowledge_base_name": "Policy Documents",
-      "response_schema": "response_schemas/policy_sathi_agent_response.json"
+      "has_knowledge_base": false,
+      "response_schema": "response_schemas/route_transport_planner_agent_response.json"
+    },
+    {
+      "node_id": "safety_agent",
+      "agent_id": "6985aaa37551cb7920ffe9f5",
+      "name": "Local Services & Safety Agent",
+      "type": "Specialist",
+      "description": "Recommends nearby restaurants, hospitals, ATMs, police stations. Sends safety alerts about hazards, weather changes, or strikes. Provides emergency contact info.",
+      "provider": "OpenAI",
+      "model": "gpt-4o",
+      "temperature": 0.5,
+      "top_p": 1,
+      "has_knowledge_base": false,
+      "response_schema": "response_schemas/local_services_safety_agent_response.json"
+    },
+    {
+      "node_id": "itinerary_agent",
+      "agent_id": "6985aabc301c62c7ca2c7e48",
+      "name": "Itinerary & Expense Tracker Agent",
+      "type": "Specialist",
+      "description": "Tracks bookings, manages itinerary, monitors expenses. Creates daily schedules, budget summaries, and reminders. Notifies if activities overlap or expenses exceed budget.",
+      "provider": "OpenAI",
+      "model": "gpt-4o",
+      "temperature": 0.4,
+      "top_p": 1,
+      "has_knowledge_base": false,
+      "response_schema": "response_schemas/itinerary_expense_tracker_agent_response.json"
     }
   ],
-  "knowledge_bases": [
-    {
-      "rag_id": "6985a356de7de278e55d2891",
-      "rag_name": "policydocumentsc7bl",
-      "name": "Policy Documents",
-      "description": "Contains government policies, employee handbooks, welfare schemes, and scholarship information that will be searched to answer user queries"
-    }
-  ]
+  "knowledge_bases": []
 }

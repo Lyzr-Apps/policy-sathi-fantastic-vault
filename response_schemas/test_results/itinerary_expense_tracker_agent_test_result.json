@@ -1,0 +1,49 @@
+{
+  "agent_name": "Itinerary & Expense Tracker Agent",
+  "agent_id": "6985aabc301c62c7ca2c7e48",
+  "test_message": "Help me organize my 3-day Tokyo trip. Day 1: arrival at 2pm, hotel check-in. Day 2: visit Senso-ji Temple, lunch in Shibuya, teamLab Borderless. Day 3: morning at Tsukiji Market, departure at 5pm. Budget is $800.",
+  "expected_purpose": "assistant",
+  "timestamp": "2026-02-06T08:49:46.013670",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "success",
+    "result": {
+      "daily_itinerary": [
+        "Day 1 - Arrival Day:",
+        "- 2:00 PM: Arrive in Tokyo",
+        "- 3:00 PM: Hotel Check-in - [Hotel Name], Tokyo",
+        "Day 2:",
+        "- 9:00 AM: Visit Senso-ji Temple - Asakusa, Tokyo",
+        "- 12:00 PM: Lunch in Shibuya - [Restaurant Name], Shibuya",
+        "- 3:00 PM: Visit teamLab Borderless - Odaiba, Tokyo",
+        "Day 3:",
+        "- 8:00 AM: Morning at Tsukiji Market - Tsukiji, Tokyo",
+        "- 1:00 PM: Return to hotel and pack",
+        "- 5:00 PM: Departure from Tokyo"
+      ],
+      "expense_summary": {
+        "total_budget": "$800",
+        "spent_so_far": "$0",
+        "remaining": "$800",
+        "breakdown": {
+          "transport": "$0",
+          "accommodation": "$0",
+          "food": "$0",
+          "activities": "$0"
+        }
+      },
+      "upcoming_reminders": [
+        "Day 1: Reminder to check-in at hotel after arrival.",
+        "Day 2: Reminder to check schedule for Senso-ji visit and confirm lunch reservation.",
+        "Day 3: Reminder to check-out from hotel before heading to Tsukiji Market."
+      ],
+      "schedule_conflicts": ""
+    },
+    "metadata": {
+      "agent_name": "Itinerary & Expense Tracker Agent",
+      "timestamp": "2023-11-24T15:22:10Z"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"success\",\n  \"result\": {\n    \"daily_itinerary\": [\n      \"Day 1 - Arrival Day:\",\n      \"- 2:00 PM: Arrive in Tokyo\",\n      \"- 3:00 PM: Hotel Check-in - [Hotel Name], Tokyo\",\n      \"Day 2:\",\n      \"- 9:00 AM: Visit Senso-ji Temple - Asakusa, Tokyo\",\n      \"- 12:00 PM: Lunch in Shibuya - [Restaurant Name], Shibuya\",\n      \"- 3:00 PM: Visit teamLab Borderless - Odaiba, Tokyo\",\n      \"Day 3:\",\n      \"- 8:00 AM: Morning at Tsukiji Market - Tsukiji, Tokyo\",\n      \"- 1:00 PM: Return to hotel and pack\",\n      \"- 5:00 PM: Departure from Tokyo\"\n    ],\n    \"expense_summary\": {\n      \"total_budget\": \"$800\",\n      \"spent_so_far\": \"$0\",\n      \"remaining\": \"$800\",\n      \"breakdown\": {\n        \"transport\": \"$0\",\n        \"accommodation\": \"$0\",\n        \"food\": \"$0\",\n        \"activities\": \"$0\"\n      }\n    },\n    \"upcoming_reminders\": [\n      \"Day 1: Reminder to check-in at hotel after arrival.\",\n      \"Day 2: Reminder to check schedule for Senso-ji visit and confirm lunch reservation.\",\n      \"Day 3: Reminder to check-out from hotel before heading to Tsukiji Market.\"\n    ],\n    \"schedule_conflicts\": \"\"\n  },\n  \"metadata\": {\n    \"agent_name\": \"Itinerary & Expense Tracker Agent\",\n    \"timestamp\": \"2023-11-24T15:22:10Z\"\n  }\n}"
+}

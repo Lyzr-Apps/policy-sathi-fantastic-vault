@@ -1,0 +1,36 @@
+{
+  "agent_name": "Route & Transport Planner Agent",
+  "agent_id": "6985aa8af513a931daeaad1c",
+  "test_message": "I need to travel from New York to Boston next Friday. Show me the fastest, cheapest, and most convenient options by train or bus.",
+  "expected_purpose": "assistant",
+  "timestamp": "2026-02-06T08:49:22.901068",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "success",
+    "result": {
+      "fastest_route": {
+        "details": "Take the Amtrak Acela Express train from New York Penn Station to Boston South Station.",
+        "time": "Approximately 3.5 hours",
+        "cost": "Around $130"
+      },
+      "cheapest_route": {
+        "details": "Take the Greyhound bus from New York Port Authority Bus Terminal to Boston South Station.",
+        "time": "Approximately 4.5 to 5 hours",
+        "cost": "Around $20"
+      },
+      "most_convenient_route": {
+        "details": "Take the Northeast Regional train from New York Penn Station to Boston South Station. Offers a balance of speed and comfort.",
+        "time": "Approximately 4 hours",
+        "cost": "Around $80"
+      },
+      "alternatives": "In case of delays, consider Megabus or BoltBus services for affordable bus options with multiple departure times.",
+      "travel_tips": "Book your tickets early to secure the best prices, especially for trains. Consider traveling outside peak hours to avoid crowds and potential traffic delays. Always check the latest travel advisories and schedules closer to your departure date."
+    },
+    "metadata": {
+      "agent_name": "Route & Transport Planner Agent",
+      "timestamp": "2023-10-05T12:00:00Z"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"success\",\n  \"result\": {\n    \"fastest_route\": {\n      \"details\": \"Take the Amtrak Acela Express train from New York Penn Station to Boston South Station.\",\n      \"time\": \"Approximately 3.5 hours\",\n      \"cost\": \"Around $130\"\n    },\n    \"cheapest_route\": {\n      \"details\": \"Take the Greyhound bus from New York Port Authority Bus Terminal to Boston South Station.\",\n      \"time\": \"Approximately 4.5 to 5 hours\",\n      \"cost\": \"Around $20\"\n    },\n    \"most_convenient_route\": {\n      \"details\": \"Take the Northeast Regional train from New York Penn Station to Boston South Station. Offers a balance of speed and comfort.\",\n      \"time\": \"Approximately 4 hours\",\n      \"cost\": \"Around $80\"\n    },\n    \"alternatives\": \"In case of delays, consider Megabus or BoltBus services for affordable bus options with multiple departure times.\",\n    \"travel_tips\": \"Book your tickets early to secure the best prices, especially for trains. Consider traveling outside peak hours to avoid crowds and potential traffic delays. Always check the latest travel advisories and schedules closer to your departure date.\"\n  },\n  \"metadata\": {\n    \"agent_name\": \"Route & Transport Planner Agent\",\n    \"timestamp\": \"2023-10-05T12:00:00Z\"\n  }\n}"
+}

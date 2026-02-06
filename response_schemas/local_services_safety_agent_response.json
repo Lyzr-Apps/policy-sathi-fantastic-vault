@@ -1,0 +1,93 @@
+{
+  "agent_name": "Local Services & Safety Agent",
+  "agent_id": "6985aaa37551cb7920ffe9f5",
+  "agent_purpose": "local_services_safety",
+  "description": "Provides information about nearby essential services (restaurants, hospitals, ATMs, police stations) and safety alerts for the user's current location, ensuring user safety through practical recommendations.",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "nearby_services": {
+        "restaurants": [
+          "string"
+        ],
+        "medical": [
+          "string"
+        ],
+        "essential_services": [
+          "string"
+        ]
+      },
+      "safety_alerts": "string",
+      "emergency_contacts": "string",
+      "safety_tips": "string"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "nearby_services": {
+        "restaurants": [
+          "Le Jules Verne (French, 0.1 miles)",
+          "58 Tour Eiffel Restaurant (Contemporary, 0.1 miles)",
+          "Les Ombres (French, 0.3 miles)",
+          "Caf\u00e9 de l'Homme (European, 0.3 miles)",
+          "Bistrot de la Tour Eiffel (Traditional French, 0.2 miles)"
+        ],
+        "medical": [
+          "American Hospital of Paris (4 miles)",
+          "H\u00f4pital Europ\u00e9en Georges-Pompidou (2 miles)"
+        ],
+        "essential_services": [
+          "ATM: BNP Paribas (0.1 miles)",
+          "Police Station: Commissariat Central du 7\u00e8me Arrondissement (0.8 miles)",
+          "Pharmacy: Pharmacie de la Tour Eiffel (0.2 miles)"
+        ]
+      },
+      "safety_alerts": "Ensure security by being vigilant of pickpocketing, especially in crowded areas. Currently, no major strikes or weather warnings are reported.",
+      "emergency_contacts": "Police: 17, Medical Emergency: 15, Fire: 18",
+      "safety_tips": "Avoid displaying valuables in public. Stick to well-lit and busy streets at night, and always be aware of your surroundings."
+    },
+    "metadata": {
+      "agent_name": "Local Services & Safety Agent",
+      "timestamp": "2023-11-01T10:30:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-02-06T08:49:34.937372",
+  "test_message_used": "Hello, provide a sample response",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "nearby_services": {
+        "restaurants": [
+          "Le Jules Verne (French, 0.1 miles)",
+          "58 Tour Eiffel Restaurant (Contemporary, 0.1 miles)",
+          "Les Ombres (French, 0.3 miles)",
+          "Caf\u00e9 de l'Homme (European, 0.3 miles)",
+          "Bistrot de la Tour Eiffel (Traditional French, 0.2 miles)"
+        ],
+        "medical": [
+          "American Hospital of Paris (4 miles)",
+          "H\u00f4pital Europ\u00e9en Georges-Pompidou (2 miles)"
+        ],
+        "essential_services": [
+          "ATM: BNP Paribas (0.1 miles)",
+          "Police Station: Commissariat Central du 7\u00e8me Arrondissement (0.8 miles)",
+          "Pharmacy: Pharmacie de la Tour Eiffel (0.2 miles)"
+        ]
+      },
+      "safety_alerts": "Ensure security by being vigilant of pickpocketing, especially in crowded areas. Currently, no major strikes or weather warnings are reported.",
+      "emergency_contacts": "Police: 17, Medical Emergency: 15, Fire: 18",
+      "safety_tips": "Avoid displaying valuables in public. Stick to well-lit and busy streets at night, and always be aware of your surroundings."
+    },
+    "metadata": {
+      "agent_name": "Local Services & Safety Agent",
+      "timestamp": "2023-11-01T10:30:00Z"
+    }
+  },
+  "test_passed": true
+}

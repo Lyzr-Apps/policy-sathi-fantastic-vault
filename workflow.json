@@ -1,0 +1,107 @@
+{
+  "workflow_name": "AI Travel Companion",
+  "architecture": "Multi-Agent System (3 Specialist Agents)",
+  "description": "A comprehensive travel planning system with three specialized agents working in parallel to provide route planning, local services/safety information, and itinerary/expense tracking.",
+  "nodes": [
+    {
+      "id": "input_node",
+      "type": "Input",
+      "label": "User Travel Request",
+      "nodeCategory": "input"
+    },
+    {
+      "id": "route_agent",
+      "type": "Agent",
+      "label": "Route & Transport Planner",
+      "nodeCategory": "agent",
+      "agent_id": "6985aa8af513a931daeaad1c",
+      "agent_name": "Route & Transport Planner Agent"
+    },
+    {
+      "id": "safety_agent",
+      "type": "Agent",
+      "label": "Local Services & Safety",
+      "nodeCategory": "agent",
+      "agent_id": "6985aaa37551cb7920ffe9f5",
+      "agent_name": "Local Services & Safety Agent"
+    },
+    {
+      "id": "itinerary_agent",
+      "type": "Agent",
+      "label": "Itinerary & Expense Tracker",
+      "nodeCategory": "agent",
+      "agent_id": "6985aabc301c62c7ca2c7e48",
+      "agent_name": "Itinerary & Expense Tracker Agent"
+    },
+    {
+      "id": "output_node",
+      "type": "Output",
+      "label": "Complete Travel Plan",
+      "nodeCategory": "end"
+    }
+  ],
+  "edges": [
+    {
+      "source": "input_node",
+      "target": "route_agent"
+    },
+    {
+      "source": "input_node",
+      "target": "safety_agent"
+    },
+    {
+      "source": "input_node",
+      "target": "itinerary_agent"
+    },
+    {
+      "source": "route_agent",
+      "target": "output_node"
+    },
+    {
+      "source": "safety_agent",
+      "target": "output_node"
+    },
+    {
+      "source": "itinerary_agent",
+      "target": "output_node"
+    }
+  ],
+  "agents": [
+    {
+      "agent_id": "6985aa8af513a931daeaad1c",
+      "name": "Route & Transport Planner Agent",
+      "type": "Specialist",
+      "description": "Suggests fastest, cheapest, or most convenient routes. Adjusts routes dynamically based on traffic or disruptions. Provides travel time estimates and alternative routes.",
+      "node_id": "route_agent",
+      "provider": "OpenAI",
+      "model": "gpt-4o",
+      "temperature": 0.7,
+      "top_p": 1,
+      "response_schema": "response_schemas/route_transport_planner_agent_response.json"
+    },
+    {
+      "agent_id": "6985aaa37551cb7920ffe9f5",
+      "name": "Local Services & Safety Agent",
+      "type": "Specialist",
+      "description": "Recommends nearby restaurants, hospitals, ATMs, police stations. Sends safety alerts about hazards, weather changes, or strikes. Provides emergency contact info.",
+      "node_id": "safety_agent",
+      "provider": "OpenAI",
+      "model": "gpt-4o",
+      "temperature": 0.5,
+      "top_p": 1,
+      "response_schema": "response_schemas/local_services_safety_agent_response.json"
+    },
+    {
+      "agent_id": "6985aabc301c62c7ca2c7e48",
+      "name": "Itinerary & Expense Tracker Agent",
+      "type": "Specialist",
+      "description": "Tracks bookings, manages itinerary, monitors expenses. Creates daily schedules, budget summaries, and reminders. Notifies if activities overlap or expenses exceed budget.",
+      "node_id": "itinerary_agent",
+      "provider": "OpenAI",
+      "model": "gpt-4o",
+      "temperature": 0.4,
+      "top_p": 1,
+      "response_schema": "response_schemas/itinerary_expense_tracker_agent_response.json"
+    }
+  ]
+}
